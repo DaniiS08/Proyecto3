@@ -49,7 +49,7 @@ function Menu_Expand(item, horizontalOffset, verticalOffset, hideScrollers) {
     Menu_ResetSiblings(tr);
     return child;
 }
-function Menu_FindMenu(item) {
+function Menu_FindMenu(item) {// funcion para buscar en el menu
     if (item && item.menu) return item.menu;
     var tr = item.parentNode.parentNode.parentNode.parentNode.parentNode;
     if (!tr.id) {
@@ -66,7 +66,7 @@ function Menu_FindMenu(item) {
     }
     return null;
 }
-function Menu_FindNext(item) {
+function Menu_FindNext(item) {// funcion para buscar el siguiente en el menu
     var a = WebForm_GetElementByTagName(item, "A");
     var parent = Menu_FindParentContainer(item);
     var first = null;
@@ -117,7 +117,7 @@ function Menu_FindParentItem(item) {
     }
     return null;
 }
-function Menu_FindPrevious(item) {
+function Menu_FindPrevious(item) { // funcion para buscar el anterior en el menu
     var a = WebForm_GetElementByTagName(item, "A");
     var parent = Menu_FindParentContainer(item);
     var last = null;
@@ -137,7 +137,7 @@ function Menu_FindPrevious(item) {
     }
     return last;
 }
-function Menu_FindSubMenu(item) {
+function Menu_FindSubMenu(item) {// funcion para buscar en el submenu
     var tr = item.parentNode.parentNode.parentNode.parentNode.parentNode;
     if (!tr.id) {
         tr=tr.parentNode;

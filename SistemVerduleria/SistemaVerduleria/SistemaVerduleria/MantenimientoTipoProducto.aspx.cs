@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using BLL;
 
 namespace SistemaVerduleria
 {
     public partial class MantenimientoTipoProducto : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void PageLoad(object sender, EventArgs e)
         {
         }
 
-        protected void btnGuardar_Click(object sender, EventArgs e)
+        protected void btnGuardarClick(object sender, EventArgs e)
         {
             //Variables necesarias para las alertas
             Type cstype = this.GetType();
